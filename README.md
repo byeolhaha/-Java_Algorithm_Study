@@ -27,10 +27,15 @@
 1. 해당 저장소를 clone 합니다.
 
    ```$ git clonehttps://github.com/Simple-Step-Algorithm/Java_Algorithm_Study.git```
-   
+      
+      
+      
 2. clone 한 디렉터리로 이동 후 본인 이름(github id)의 브랜치로 체크아웃 합니다.
-`$ git checkout -b {github_id}
-ex) git checkout -b ahn-sj`
+
+
+   ```$ git checkout -b {github_id}
+   ex) git checkout -b ahn-sj```
+      
 3. 학습한 내용을 마크다운 형식(xx.md) 혹은 PDF와 같이 Github Preview로 바로 볼 수 있는 형태의 확장자로 작성합니다.
 
 4. 작성한 자료를 본인 이름의 디렉토리에 위치시킵니다.
@@ -38,9 +43,10 @@ ex) git checkout -b ahn-sj`
 
 5. 변경 사항을 add/commit/push 합니다.
 
-`$ git add .
-$ git commit -m "[큰 주제] 학습 주제"
-$ git push origin {본인 브랜치 명}`
+   ```$ git add .
+   $ git commit -m "[큰 주제] 학습 주제"
+   $ git push origin {본인 브랜치 명}```
+      
 6. Github에서 Pull Request를 등록합니다.
   6-1) 저장소 내 `Pull requests` 메뉴로 이동
   6-2) `New pull request` 버튼 클릭
@@ -51,4 +57,4 @@ $ git push origin {본인 브랜치 명}`
 
 7. 스터디 진행 후 본인의 PR을 `Merge pull request` 버튼을 눌러 반영(merge)합니다.
 (만약 질문을 받은 내용이 있을 경우 간단하게 코멘트를 남겨주세요.)
-<7번은 스터디후의 과정입니다.>
+<7번은 `스터디후의 과정`입니다.>
