@@ -34,9 +34,10 @@
 2. clone 한 디렉터리로 이동 후 본인 이름(github id)의 브랜치로 체크아웃 합니다.
 
 
-   ``` $ git checkout -b {github_id}
-         ex) git checkout -b ahn-sj
-   ```
+         ``` 
+            $ git checkout -b {github_id}
+            ex) git checkout -b ahn-sj
+         ```
       
 3. 학습한 내용을 마크다운 형식(xx.md) 혹은 PDF와 같이 Github Preview로 바로 볼 수 있는 형태의 확장자로 작성합니다.
 
