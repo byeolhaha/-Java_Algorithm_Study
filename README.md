@@ -36,7 +36,7 @@ $ git clonehttps://github.com/Simple-Step-Algorithm/Java_Algorithm_Study.git
 
 ``` 
 $ git checkout -b {github_id}
-ex) git checkout -b ahn-sj
+ex) git checkout -b jeon-cj
 ```
       
 3. 학습한 내용을 마크다운 형식(xx.md) 혹은 PDF와 같이 Github Preview로 바로 볼 수 있는 형태의 확장자로 작성합니다.
