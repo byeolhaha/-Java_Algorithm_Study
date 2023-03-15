@@ -1,7 +1,7 @@
 # Java_Algorithm_Study
 
 ## [스터디 시간]
-평일 오전108시 (1시간 ~ 2시간)
+평일 오전 10시 (1시간 ~ 2시간)
 
 <hr/>
 
@@ -16,16 +16,16 @@
 <hr/>
 
 ## [문제 사이트]
-프로그래머스 <- NOW
-백준
-리트 코드
+- 프로그래머스 <- NOW
+- 백준
+- 리트 코드
 
 <hr/>
 
 ## Manual
 
 1. 해당 저장소를 clone 합니다.
-`$ git clonehttps://github.com/Simple-Step-Algorithm/Java_Algorithm_Study.git`
+```$ git clonehttps://github.com/Simple-Step-Algorithm/Java_Algorithm_Study.git```
 2. clone 한 디렉터리로 이동 후 본인 이름(github id)의 브랜치로 체크아웃 합니다.
 `$ git checkout -b {github_id}
 ex) git checkout -b ahn-sj`
