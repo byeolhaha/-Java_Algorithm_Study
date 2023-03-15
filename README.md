@@ -25,7 +25,7 @@
 ## Manual
 
 1. 해당 저장소를 clone 합니다.
-```$ git clonehttps://github.com/Simple-Step-Algorithm/Java_Algorithm_Study.git```
+   ```$ git clonehttps://github.com/Simple-Step-Algorithm/Java_Algorithm_Study.git```
 2. clone 한 디렉터리로 이동 후 본인 이름(github id)의 브랜치로 체크아웃 합니다.
 `$ git checkout -b {github_id}
 ex) git checkout -b ahn-sj`
