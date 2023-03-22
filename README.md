@@ -27,7 +27,7 @@
 1. 해당 저장소를 clone 합니다.
 
 ```
-$ git clonehttps://github.com/Simple-Step-Algorithm/Java_Algorithm_Study.git
+$ git clone https://github.com/Simple-Step-Algorithm/Java_Algorithm_Study.git
 ```
       
       
