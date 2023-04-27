@@ -1,0 +1,116 @@
+## 접근
+>https://school.programmers.co.kr/learn/courses/30/lessons/72411#qna
+
+이 문제는 DFS를 통해서 모든 조합을 만들어야 합니다.
+모든 조합을 만들어서 Map 저장하고 
+그 Map의 
+
+key의 길이는 
+2이상이면서 
+문제에서 주어진 course의 길이를 만족하고
+
++
+길이를 만족하는 것 중에서 손님으로부터 가장 많은 주문을 받은 조합을 구해야합니다.
+
+카카오 문제를 풀면서 느낀 것은 조건이 까다롭지만 
+이를 모두 지키면 정답이 나오는 문제가 많았고
+그래서 코드가 조금 복잡해진다는 것이 있었습니다.
+
+모든 조건을 만족하면서
+긴 코드여도 망설이지 않고 푸는 것이 중요한거 같습니다.
+
+
+
+## 풀이
+
+```java
+import java.util.*;
+
+class Solution {
+    
+    static Map<String,Integer> map = new TreeMap<>();
+    
+    public ArrayList<String> solution(String[] orders, int[] course) {
+        ArrayList<String> answer = new ArrayList<>();
+        // 기존 요리를 조합해서 코스 요리
+        // 가장 많이 주문한 단품 메뉴들을 코스 요리 메뉴로 구성
+        // 코스 요리는 최소 2가지 이상
+        // 최소 2명 이상의 손님으로부터 주문된 단품 메뉴 조합에 대해서만 
+        
+        
+        //코스의 길이는 최대 1에서 10개
+        int[] newCourse = new int[11];
+        
+        //앞서 코스요리의 길이를 비교하기 위해서
+        //문제에서 구하라는 코스요리의 길이에 2라는 값을 저장
+        for(int c : course){
+            newCourse[c]=2;
+        }
+    
+       for(int i=0;i<orders.length;i++){
+           boolean[] visited = new boolean[orders[i].length()];
+           String sortedMenu = sortMenu(orders[i]);
+           dfs(sortedMenu,"",visited,0);
+       }
+        
+        
+        //메뉴 개수가 course를 만족하면서 2이상이면서 최대 인 것을 넣어야 합니다.
+         for(String k : map.keySet()){
+             //k의 length가 course를 만족
+             if(newCourse[k.length()]!=0){
+                 // 하면서 가장 최대로 많이 뽑이 조합의 횟수를 저장
+                   if(newCourse[k.length()]<=map.get(k)){
+                       newCourse[k.length()] = map.get(k);
+                   }
+             } 
+        }
+        
+        //이제 가장 많이 뽑힌 코스를 넣는다.
+         for(String k : map.keySet()){
+             //k의 length가 course를 만족
+             if(newCourse[k.length()]!=0){
+                 //저장된 최댓값이 그 조합이 뽑힌 횟수와 같다면 정답에 포함
+                   if(newCourse[k.length()]==map.get(k)){
+                       answer.add(k);
+                   }
+             } 
+        }
+        
+        
+        
+        return answer;
+    }
+    
+    //손님의 단품 메뉴의 모든 조합을 만든다.
+    static void dfs(String start , String menu, boolean[] visited, int index){
+        String[] startArr = start.split("");
+        //백트래킹을 사용하지만 앞에서부터 차곡차곡 만들기 위해서
+        //즉 BA가 나오지 않기 위해서 시적점을 매개변수로 받기
+        for(int i=index;i<startArr.length;i++){
+            if(!visited[i]){
+                visited[i]=true;
+                map.put(menu+startArr[i],map.getOrDefault(menu+startArr[i],0)+1);
+                dfs(start,menu+startArr[i],visited,i);
+                visited[i]=false;
+            }
+            
+        }   
+    }
+    
+    // 손님의 주문을 정렬하는 메서드
+    static String sortMenu(String caos_menu){
+        String[] arrCaos = caos_menu.split("");
+        Arrays.sort(arrCaos);
+        StringBuilder sb = new StringBuilder();
+        
+        for(String a : arrCaos){
+            sb.append(a);
+        }
+        
+        return sb.toString();
+        
+        
+        
+    }
+}
+```
